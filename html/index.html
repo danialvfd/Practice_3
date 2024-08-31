@@ -1,0 +1,199 @@
+<html lang="fa">
+
+<head>
+    <link rel="stylesheet" href="../css/monta.css">
+    <link rel="stylesheet" href="../css/bulma.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="../img/montaLogo.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="educational web">
+    <meta name="keywords" content="HTML, education, js">
+    <meta name="author" content="Danial Vafadar">
+    <title>site</title>
+</head>
+
+<body class="has-background-dark">
+    <section class="section">
+        <div class="box">
+            <div class="columns is-gap-1 p-0 m-0">
+                <div class="is-hidden-tablet">
+                    <div class="m-1">
+                        <span class="has-text-weight-medium">ادبیات فارسی اختصاصی 3</span>
+                        <span class="price-text"> (ویژه دبیر، مدرسه، آموزشگاه)</span>
+                    </div>
+                    <div class="mt-2 mb-3 is-flex-row-end">
+                        <span>
+                            <span>0</span>
+                            <i class="fa-regular fa-heart ml-4"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="column is-flex is-narrow is-paddingless has-centered-children">
+                    <figure class="image book-cover">
+                        <img src="../img/ketab.png" alt="book-cover" class="is-slightly-rounded">
+                    </figure>
+                </div>
+                <div class="column is-paddingless book-detailed-box">
+                    <div>
+                        <div class="m-1 is-hidden-mobile">
+                            <span class="has-text-weight-medium">ادبیات فارسی اختصاصی 3</span>
+                        </div>
+                        <div class="m-1 mt-2 is-hidden-mobile">
+                            <span class="yellow-text has-text-warning">دبیرستان</span>
+                            <span class="yellow-text has-text-warning">چهارم</span>
+                            <span class="yellow-text has-text-warning">انسانی (نظام قدیم)</span>
+                        </div>
+                        <div class="columns mt-1 width-tablet">
+                            <div class="column">
+                                <div class="mt-3">
+                                    <span class="membership-text">اشتراک ویژه دانش آموزان</span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <div class="mt-2">
+                                    <button onclick="calculatePrices(1)"
+                                        class="button is-pripary is-dark is-outlined is-small m-1 my-button" name="pack-duration">
+                                        <span>1 </span>
+                                        <span> &nbsp;ماه</span>
+                                    </button>
+                                    <button onclick="calculatePrices(3)" class="button is-dark is-outlined is-small m-1 my-button"
+                                        name="pack-duration">
+                                        <span>3</span>
+                                        <span> &nbsp;ماه</span>
+                                    </button>
+                                    <button onclick="calculatePrices(6)" class="button is-dark is-outlined is-small m-1 my-button"
+                                        name="pack-duration">
+                                        <span>6</span>
+                                        <span> &nbsp;ماه</span>
+                                    </button>
+                                    <button onclick="calculatePrices(9)" class="button is-dark is-outlined is-small m-1 my-button"
+                                        name="pack-duration">
+                                        <span>9</span>
+                                        <span> &nbsp;ماه</span>
+                                    </button>
+                                    <button onclick="calculatePrices(12)" class="button is-dark is-outlined is-small m-1 my-button"
+                                        name="pack-duration">
+                                        <span>12</span>
+                                        <span> &nbsp;ماه</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="column ">
+                                <div class="mt-3">
+                                    <span class="membership-text">اشتراک ویژه مدارس </span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <div class="mt-2">
+                                    <button onclick="calculatePrices(12)" class="button is-dark is-outlined is-small m-1 my-button"
+                                        name="pack-duration">
+                                        <span>12</span>
+                                        <span> &nbsp;ماه</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-price-column">
+                        <span class="has-text-weight-medium">قیمت کل: </span>
+                        <span id="totalPayment" class="has-text-weight-medium">0</span>
+                        <span class="has-text-weight-medium">ریال </span>
+                        <span class="price-text"> (حق اشتراک: </span>
+                        <span class="price-text" id="monthlyPrice">0</span>
+                        <span class="price-text"> تومان + شارژ دریافتی </span>
+                        <span class="price-text" id="monthlyPayment">0</span>
+                        <span class="price-text">تومان)</span>
+                    </div>
+                </div>
+                <div class="column is-paddingless is-narrow product-column">
+                    <div class="is-hidden-mobile">
+                        <span>
+                            <span>2</span>
+                            <i class="fa-regular fa-heart ml-4"></i>
+                        </span>
+                        <span>
+                            <span>213</span>
+                            <i class="fa-solid fa-eye"></i>
+                        </span>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <div class="is-hidden-mobile">
+                        <button class="button is-primary is-4">
+                            <span class="icon is-small">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                            <span>افزودن به سبد خرید</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box content">
+            <h3 class="mb-5"> در این کتاب چه خواهید دید؟</h3>
+            <div class="fixed-grid has-4-cols has-1-cols-mobile">
+                <div class="grid">
+                    <div class="cell mb-5">
+                        <div class="flex-box">
+                            <figure class="image item-cover">
+                                <img src="../img/icon1.PNG" alt="item-cover">
+                            </figure>
+                            <div class="subjects-formation">
+                                <span class="m-0 has-text-weight-semibold">3 &nbsp; سوال </span>
+                                <span class="m-0 Text-counting-questions">تعداد سوال تستی</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell mb-5">
+                        <div class="flex-box">
+                            <figure class="image item-cover">
+                                <img src="../img/icon2.PNG" alt="item-cover">
+                            </figure>
+                            <div class="subjects-formation">
+                                <span class="m-0 has-text-weight-semibold">72 &nbsp; سوال </span>
+                                <span class="m-0 Text-counting-questions">تعداد سوال تشریحی</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell mb-5">
+                        <div class="flex-box">
+                            <figure class="image item-cover">
+                                <img src="../img/icon3.PNG" alt="item-cover">
+                            </figure>
+                            <div class="subjects-formation">
+                                <span class="m-0 has-text-weight-semibold">0 &nbsp; سوال </span>
+                                <span class="m-0 Text-counting-questions">تعداد سوال های ویدیودار</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell mb-5">
+                        <div class="flex-box">
+                            <figure class="image item-cover">
+                                <img src="../img/icon4.PNG" alt="item-cover">
+                            </figure>
+                            <div class="subjects-formation">
+                                <span class="m-0 has-text-weight-semibold">0 &nbsp; درسنامه </span>
+                                <span class="m-0 Text-counting-questions">تعداد درسنامه ها </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="is-hidden-tablet has-centered-children modal-card-foot mobile-submit-buttom">
+            <button class="button is-primary">
+                <span class="icon is-small">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+                <span>افزودن به سبد خرید</span>
+            </button>
+        </div>
+    </section>
+    <script src="../js/myJavaScript.js"></script>
+</body>
+
+</html>

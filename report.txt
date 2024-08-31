@@ -1,0 +1,19 @@
+1-  <body                   -2
+2-  <div style="column">    -2
+3- <br>                     -40
+4- <span class="span">      -20
+
+--------------------
+1- .buttom-column-style {   -20
+2- 5px                      -20
+3- 100px            -20
+3- width: 100px;            -20
+4- 24px;            -20
+5- 24px;            -20
+6- .text-height         -20
+7- mobile-buttom            -20
+8- .width-price-box{            -20
+9-    width: 230px;         -20
+10-    width: 230px;            -20
+11-  style="width: 100%;"
+12- تعریف نشد
