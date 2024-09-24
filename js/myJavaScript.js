@@ -27,8 +27,14 @@ function calculatePrices(number) {
 
 document.querySelectorAll('.my-button').forEach(button => {
     button.addEventListener('click', function() {
-        document.querySelectorAll('.my-button').forEach(btn => btn.classList.remove('is-checked'));
+        var pS = document.querySelectorAll('.my-button');
+        for (let index = 0; index < pS.length; index++) {
+            const element = pS[index];
+            element.classList.remove('is-checked');
+        }
+        //.forEach(btn => btn.classList.remove('is-checked'));
         
-        this.classList.add('is-checked');
+        button.classList.add('is-checked');
     });
 });
+
